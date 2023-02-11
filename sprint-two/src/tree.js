@@ -17,7 +17,7 @@ treeMethods.addChild = function(value) {
   // use this to access the parent and set the new tree as one of its children
   this.children.push(newTree);
 };
-
+// O(1)
 treeMethods.contains = function(target) {
   // see if target === value
   if (this.value === target) {
@@ -39,6 +39,7 @@ treeMethods.contains = function(target) {
   return false;
 
 };
+// O(n)
 
 
 

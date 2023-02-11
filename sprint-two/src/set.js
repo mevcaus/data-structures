@@ -11,6 +11,7 @@ setPrototype.add = function(item) {
     this.storage.push(item);
   }
 };
+// O(n)
 
 setPrototype.contains = function(item) {
   if (this.storage.indexOf(item) === -1) {
@@ -18,11 +19,13 @@ setPrototype.contains = function(item) {
   }
   return true;
 };
+// O(n)
 
 setPrototype.remove = function(item) {
   var index = this.storage.indexOf(item);
   this.storage.splice(index, 1);
 };
+// O(n)
 
 /*
  * Complexity: What is the time Zcomplexity of the above functions?

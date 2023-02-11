@@ -13,6 +13,7 @@ var LinkedList = function() {
       list.tail = node;
     }
   };
+  // O(1)
 
   list.removeHead = function() {
     var newHead = list.head.next;
@@ -23,6 +24,7 @@ var LinkedList = function() {
     list.head = newHead;
     return removed;
   };
+  // O(1)
 
   list.contains = function(target) {
     var current = list.head;
@@ -38,6 +40,7 @@ var LinkedList = function() {
 
   return list;
 };
+// O(n)
 
 var Node = function(value) {
   var node = {};
@@ -50,4 +53,5 @@ var Node = function(value) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+
  */

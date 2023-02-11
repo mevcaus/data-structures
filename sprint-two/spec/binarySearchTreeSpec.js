@@ -37,4 +37,37 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3, 7]);
   });
+
+
+});
+
+
+describe('unitTest', function() {
+  var bigGuy = BinarySearchTree(50);
+  for (var i = 0; i < 101; i++) {
+    (function (i) {
+      if (i < 101) {
+        bigGuy.insert(Math.floor(Math.random() * 100));
+      }
+    })(i);
+  }
+  var coolArray = [];
+  //var currentTree = this;
+  bigGuy.depthFirstLog(function(currentTree) {
+    //console.log(v);
+    // console.log(this.value);
+    //coolArray.push(v);
+    console.log('current tree is: ' + currentTree);
+    coolArray.push(currentTree);
+  });
+  console.log(coolArray);
+  console.log(bigGuy);
+  for (var j = 0; j < coolArray.length; j++) {
+    (function(j) {
+      it('should contain ' + coolArray[j], function() {
+        console.log(bigGuy);
+        expect(bigGuy.contains(coolArray[j])).to.equal(true);
+      });
+    })(j); // im hoping htis works? idk man
+  }
 });
